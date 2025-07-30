@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ConvexClientProvider } from "@/components/ConvexClientProvider";
 
 const inter = Inter({
   subsets: ["latin"]
@@ -18,7 +19,9 @@ export default function RootLayout({ children }) {
 				<link rel="icon" href="/logos/logo-s-2.png" sizes="any" />
 			</head>
 			<body className={`${inter.className}`}>
-				<main className="min-h-screen">{children}</main>
+        <ConvexClientProvider>
+					<main className="min-h-screen">{children}</main>
+				</ConvexClientProvider>
 			</body>
 		</html>
   );
