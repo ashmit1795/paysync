@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Re-enable hover for all elements, regardless of device/browser detection */
+@custom-variant hover (&:hover);
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
